@@ -1,0 +1,5 @@
+@import "src/styles/variables";
+html, body {
+    color: $mainBackgroundColor;
+    background-color: $mainBackgroundColor;
+}
