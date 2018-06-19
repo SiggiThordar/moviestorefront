@@ -1,5 +1,6 @@
 import { Injectable, Inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class MovieService {
@@ -8,10 +9,12 @@ export class MovieService {
     @Inject('ApiRoot') private apiRoot,
     private http: HttpClient
   ) { }
+  
 
-  getAllMovies(){
-    this.http.get('/api/movies/allmovies').subscribe( movie => {
-      console.log(movie);
+   getAllMovies(){
+    this.http.get(`${this.apiRoot}/api/movies/movielist`).subscribe( movies => {
+      console.log(movies);
     })
-  }
+  } 
+  
 }
