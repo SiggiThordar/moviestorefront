@@ -8,8 +8,9 @@ import { AppRoutingModule,  MyRoutedComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MovieService } from './services/movie.service';
 import { AccountDropdownComponent } from './components/core/account-dropdown/account-dropdown.component';
-import { NavbarComponent } from './components/core/navbar/navbar.component';
+
 import { AuthService } from './services/auth.service';
+import { NavbarComponent } from './components/core/navbar/navbar.component';
 
 
 
@@ -19,8 +20,7 @@ import { AuthService } from './services/auth.service';
     AppComponent,
     MyRoutedComponents,
     AccountDropdownComponent,
-    /* NavbarComponent, */
-    
+    NavbarComponent    
     
   ],
   imports: [

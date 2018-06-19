@@ -9,7 +9,7 @@ import { MovieService } from '../../../services/movie.service';
 export class MovieListComponent implements OnInit {
     
   constructor(
-    private movieService: MovieService
+    public movieService: MovieService
   ) { }
 
   ngOnInit() {

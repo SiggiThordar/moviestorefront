@@ -1,12 +1,12 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-12">            
-      <div *ngFor="let x of movieList" class="movie-block">
+    <div class="col-md-12" *ngIf = "movieService.allmovies">            
+      <div *ngFor="let x of movieService.allmovies" class="movie-block">
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="..." alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">{{x.title}}</h5>
-              <p class="card-text">{{x.about}}</p>
+              <h5 class="card-title">{{x.Title}}</h5>
+              <p class="card-text">{{x.About}}</p>
               <a href="#" class="btn btn-primary">Nánar</a>
             
           </div>
