@@ -1,3 +1,17 @@
-<p>
-  navbar works!
-</p>
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+  <a class="navbar-brand" routerLink="/" (click)="navbarCollapsed = true">MovieRental</a>
+  <button (click)="navbarCollapsed = !navbarCollapsed" class="navbar-toggler navbar-toggler-right" [attr.aria-expanded]="!navbarCollapsed"
+    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse" [ngbCollapse]="navbarCollapsed" id="navbarContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="movie/list" (click)="navbarCollapsed = true">Movies</a>
+      </li>
+    </ul>
+    <div class="form-inline my-2 my-lg-0">
+      <app-account-dropdown></app-account-dropdown>
+    </div>
+  </div>
+</nav>
