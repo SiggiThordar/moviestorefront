@@ -11,6 +11,7 @@ import { AccountDropdownComponent } from './components/core/account-dropdown/acc
 
 import { AuthService } from './services/auth.service';
 import { NavbarComponent } from './components/core/navbar/navbar.component';
+import { RentListComponent } from './components/routed/rent-list/rent-list.component';
 
 
 
@@ -20,7 +21,8 @@ import { NavbarComponent } from './components/core/navbar/navbar.component';
     AppComponent,
     MyRoutedComponents,
     AccountDropdownComponent,
-    NavbarComponent    
+    NavbarComponent,
+    RentListComponent    
     
   ],
   imports: [

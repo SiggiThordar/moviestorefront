@@ -5,12 +5,14 @@ import { RegisterComponent } from './components/routed/register/register.compone
 import { LoginComponent } from './components/routed/login/login.component';
 import { NavbarComponent } from './components/core/navbar/navbar.component';
 import { AppComponent } from './app.component';
+import { RentListComponent } from './components/routed/rent-list/rent-list.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'movie/list', pathMatch: 'full'},
+  { path: '""', redirectTo: 'movie/list', pathMatch: 'full'},
   { path: 'movie/list', component: MovieListComponent }, 
   { path: 'account/register', component: RegisterComponent },
-  { path: 'account/login', component: LoginComponent }
+  { path: 'account/login', component: LoginComponent },
+  { path: 'rent/list', component: RentListComponent }
 ];
 
 @NgModule({
@@ -22,6 +24,7 @@ export class AppRoutingModule { }
 export const MyRoutedComponents = [
   MovieListComponent,
   RegisterComponent,
+  RentListComponent,
   LoginComponent,
   NavbarComponent,
   AppComponent  
