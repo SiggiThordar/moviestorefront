@@ -5,8 +5,7 @@ import { movie } from '../models/movie';
 
 @Injectable()
 export class MovieService {
-  movies: movie[];
-  allrents: any;
+
   constructor(
     @Inject('ApiRoot') private apiRoot,
     private http: HttpClient
