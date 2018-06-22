@@ -1,10 +1,11 @@
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { movie } from '../models/movie';
 
 @Injectable()
 export class MovieService {
-  allmovies: any;
+  movies: movie[];
   allrents: any;
   constructor(
     @Inject('ApiRoot') private apiRoot,
@@ -12,18 +13,11 @@ export class MovieService {
   ) { }
   
 
-   getAllMovies(){
-    this.http.get(`${this.apiRoot}/api/movies/movielist`).subscribe( movies => { this.allmovies = movies;
-      console.log(movies);
-    })
+  getAllMovies(): Observable<movie[]> {
+     return this.http.get<movie[]>(`${this.apiRoot}/api/movies/movielist`);
   }
 
-  getAllRents(){
-    this.http.get(`${this.apiRoot}/api/rent/user`).subscribe( rents => { this.allrents = rents;
-    console.log(rents);
-    })
+  getAllRents(): Observable<any>{
+    return this.http.get(`${this.apiRoot}/api/rent/user`);
   }
-  
-  
-  
 }

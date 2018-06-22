@@ -19,12 +19,14 @@ export class RentListComponent implements OnInit {
   ngOnInit() {
     this.movieService.getAllRents();
     let user = this.authService.checkUser();
+
     if(user){
-    this.loggedIn = true;
-    }else{
-    this.loggedIn = false;
+      this.loggedIn = true;
+    } else {
+      this.loggedIn = false;
     }
-    console.log(this.loggedIn);
+    
+    console.log("Logged in: " + this.loggedIn);
   }
   
 }
